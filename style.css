@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Inter" sans-serif;
 }
 html {
@@ -151,19 +150,22 @@ h3 {
   display: flex;
 }
 .secondsection article {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 1rem;
-  font-size: 18px;
   justify-content: space-evenly;
+  width: mmax-content;
+  height: max-content;
+}
+.secondsection article div {
+  padding-inline: 1rem;
 }
 
 .secondsection article h4 {
   color: hsl(240, 100%, 5%);
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   justify-content: space-evenly;
   cursor: pointer;
 }
@@ -189,13 +191,14 @@ h2 {
 }
 .secondsection article p {
   font-size: 1rem;
-  margin-top: 6%;
+  margin-top: 1vh;
 }
 
-@media (max-width: 600px) {
-  html {
+@media (max-width: 1200px) {
+  html, body {
     margin: 1rem 1rem;
     padding: 1rem 1rem;
+    diaplay: none;
   }
   #header {
     display: flexbox;
@@ -231,6 +234,9 @@ h2 {
     border: none;
     background: none;
   }
+  .open button:hover {
+    cursor: pointer;
+  }
 
   nav ul li {
     display: block;
@@ -244,10 +250,12 @@ h2 {
     display: inline;
     margin: 0;
     padding: 0;
+    width: 100%;
+    
   }
 
   .desktopmobile img {
-    margin: 0;
+    margin: 1rem 2rem;
     padding: 0;
   }
 
@@ -260,9 +268,11 @@ h2 {
   .new {
     width: 100%;
   }
-  .secondsection {
-    display: inline;
-    justify-content: space-between;
-    align-items: center;
+  .end {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    align-self: none;
+  
   }
 }

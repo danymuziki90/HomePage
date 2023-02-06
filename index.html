@@ -30,13 +30,9 @@
         <div class="logo">
           <img src="./assets/images/logo.svg" alt="imagedulogo" />
         </div>
-        <ul>
-          <button>
-            <img
-              src="./assets/images/icon-menu-close.svg"
-              alt=""
-              class="close"
-            />
+        <ul id="lmenu">
+          <button id="close" ()>
+            <img src="./assets/images/icon-menu-close.svg" alt="" />
           </button>
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
@@ -45,8 +41,8 @@
           <li><a href="#">categories</a></li>
         </ul>
         <div class="open">
-          <button>
-            <img src="./assets/images/icon-menu.svg" alt=""/>
+          <button id="open" ()>
+            <img src="./assets/images/icon-menu.svg" alt="" />
           </button>
         </div>
       </nav>
@@ -103,42 +99,42 @@
       </div>
     </section>
     <section class="secondsection">
-      <article>
-        <div class="myimage">
-          <img src="./assets/images/image-retro-pcs.jpg" alt="image Retro" />
-        </div>
-        <div>
-          <span>01</span>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </div>
-      </article>
-      <article>
-        <div class="myimage">
-          <img src="./assets/images/image-top-laptops.jpg" alt="top laptop" />
-        </div>
-        <div>
-          <span>02</span>
-          <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets</p>
-        </div>
-      </article>
-      <article>
-        <div class="myimage">
-          <img
-            src="./assets/images/image-gaming-growth.jpg"
-            alt="gaming-growth"
-          />
-        </div>
-        <div>
-          <span>03</span>
-          <h4>The Growth of Gaming</h4>
-          <p>How the pandemic has sparked fresh opportunities.</p>
-        </div>
-      </article>
+      <div class="end">
+        <article>
+          <div class="myimage">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="image Retro" />
+          </div>
+          <div>
+            <span>01</span>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
+        <article>
+          <div class="myimage">
+            <img src="./assets/images/image-top-laptops.jpg" alt="top laptop" />
+          </div>
+          <div>
+            <span>02</span>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p>Our best picks for various needs and budgets</p>
+          </div>
+        </article>
+        <article>
+          <div class="myimage">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="gaming-growth"
+            />
+          </div>
+          <div>
+            <span>03</span>
+            <h4>The Growth of Gaming</h4>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+      </div>
     </section>
-
-    <script src="index.js"></script>
 
     <div class="attribution">
       Challenge by
@@ -146,5 +142,14 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Daniel Muzike</a>.
     </div>
+    <script>
+      var lmenu = document.getElementById("lmenu");
+      function open() {
+        lmenu.style.right = "0px";
+      }
+      function close() {
+        lmenu.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
