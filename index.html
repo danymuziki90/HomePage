@@ -12,8 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="js" href="index.js" />
-    <title>Frontend Mentor | News homepage</title>
+    <title>News homepage</title>
     <style>
       .attribution {
         font-size: 11px;
@@ -25,36 +24,28 @@
     </style>
   </head>
   <body>
-    <header id="header">
-      <nav id="menu">
-        <div class="logo">
-          <img src="./assets/images/logo.svg" alt="imagedulogo" />
-        </div>
-        <ul id="lmenu">
-          <button id="close" ()>
-            <img src="./assets/images/icon-menu-close.svg" alt="" />
-          </button>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">New</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Trending</a></li>
-          <li><a href="#">categories</a></li>
-        </ul>
-        <div class="open">
-          <button id="open" ()>
-            <img src="./assets/images/icon-menu.svg" alt="" />
-          </button>
-        </div>
-      </nav>
-    </header>
+        <header>
+          <nav class="nav">
+            <img src="./assets/images/logo.svg" alt="imagedulogo" class="logo"/>
+    
+            <div class="hamburger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+    
+            <div class="nav__link hide">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">News</a>
+            </div>
+          </nav>
+        </header>
     <section class="firstsection">
       <div class="desktopmobile">
-        <picture>
-          <source
-            media="min-width:768px"
-            srcset="./assets/images/image-web-3-desktop.jpg"
-          />
-          <img src="./assets/images/image-web-3-mobile.jpg" />
+        <picture class="imageweb">
+          <img src="./assets/images/image-web-3-mobile.jpg" class="imgweb" />
         </picture>
         <div class="bright">
           <h1>The Bright Future of Web 3.0?</h1>
@@ -136,20 +127,18 @@
       </div>
     </section>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
       >. Coded by <a href="#">Daniel Muzike</a>.
-    </div>
+    </footer>
     <script>
-      var lmenu = document.getElementById("lmenu");
-      function open() {
-        lmenu.style.right = "0px";
-      }
-      function close() {
-        lmenu.style.right = "-200px";
-      }
+      const hamburger = document.querySelector('.hamburger');
+const navLink = document.querySelector('.nav__link');
+
+hamburger.addEventListener('click', () => {
+  navLink.classList.toggle('hide');
+});
     </script>
   </body>
 </html>
